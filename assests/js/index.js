@@ -1,6 +1,6 @@
 var themeButton = document.getElementById('theme-switch');
 var dataThemeElements = document.querySelectorAll('[data-theme]');
-
+console.log(dataThemeElements);
 var theme = localStorage.getItem('current-theme');
 if (!theme) {
 	localStorage.setItem('current-theme', 'light');

@@ -1,0 +1,108 @@
+nav {
+	margin: 0.5rem 0;
+	.container {
+		height: 4rem;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.navbar-header {
+		display: flex;
+		align-items: center;
+
+		@media (max-width: 768px) {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-direction: row-reverse;
+		}
+		.navbar-toggler {
+			border-radius: 5px;
+			background-color: transparent;
+			cursor: pointer;
+			border: none;
+			display: none;
+			outline: none;
+
+			@media (max-width: 768px) {
+				display: block;
+			}
+
+			span {
+				height: 2px;
+				width: 22px;
+				background-color: lighten($text-color, 35%);
+				display: block;
+			}
+			span:not(:last-child) {
+				margin-bottom: 0.2rem;
+			}
+		}
+
+		> a {
+			font-weight: 500;
+			h4 {
+				color: $title-color;
+				span {
+					color: $first-color;
+				}
+			}
+			h4[data-theme='dark'] {
+				color: $text-color-alt;
+				span {
+					color: $first-color;
+				}
+			}
+		}
+	}
+
+	.navbar-right {
+		display: flex;
+		flex-direction: row;
+
+		.navbar-menu {
+			.navbar-nav {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: end;
+				margin-left: 1rem;
+
+				> li {
+					margin: 1rem;
+					> a:hover {
+						color: $first-color;
+					}
+				}
+			}
+		}
+		.navbar-menu[data-theme='dark'] {
+			.navbar-nav {
+				> li {
+					> a {
+						color: $text-color-alt;
+					}
+					> a:hover {
+						color: $first-color-alt;
+					}
+				}
+			}
+		}
+
+		.theme-switcher {
+			margin: auto 1rem;
+			cursor: pointer;
+			width: 1.5rem;
+			height: 1.5rem;
+			border-radius: 50%;
+			background: url('../img/icons/moon.svg');
+		}
+
+		.theme-switcher[data-theme='dark'] {
+			background: url('../img/icons/sun.svg');
+		}
+	}
+}
