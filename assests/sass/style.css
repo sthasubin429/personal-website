@@ -50,7 +50,7 @@ html {
 }
 
 html[data-theme='dark'] {
-  background-color: #323244;
+  background-color: #2e2e2e;
 }
 
 html.transition,
@@ -285,7 +285,7 @@ nav .container .navbar-right .theme-switcher[data-theme='dark'] {
 }
 
 nav[data-theme='dark'] {
-  background-color: #323244;
+  background-color: #2e2e2e;
 }
 
 .secondary-nav {
@@ -329,6 +329,6 @@ nav[data-theme='dark'] {
 }
 
 .secondary-nav[data-theme='dark'] {
-  background-color: #323244;
+  background-color: #2e2e2e;
 }
 /*# sourceMappingURL=style.css.map */
