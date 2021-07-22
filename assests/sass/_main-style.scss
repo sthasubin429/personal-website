@@ -1,0 +1,15 @@
+.theme-switcher {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: url('../img/icons/moon.svg');
+	// background: rebeccapurple;
+}
+
+.theme-switcher[data-theme='dark'] {
+	background: url('../img/icons/sun.svg');
+	// background: red;
+}
