@@ -36,6 +36,19 @@
 	}
 }
 
+.content {
+	margin-top: 0;
+	@media only screen and (min-width: 576px) {
+		margin-top: 4rem;
+	}
+}
+
+.content-end {
+	margin-bottom: 4rem;
+	@media only screen and (min-width: 576px) {
+		margin-bottom: 0;
+	}
+}
 .btn {
 	border: none;
 }

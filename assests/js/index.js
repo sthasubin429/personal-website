@@ -1,11 +1,7 @@
 var themeButton = document.getElementById('theme-switch');
 var dataThemeElements = document.querySelectorAll('[data-theme]');
-console.log(dataThemeElements);
+
 var theme = localStorage.getItem('current-theme');
-if (!theme) {
-	localStorage.setItem('current-theme', 'light');
-	theme = localStorage.getItem('current-theme');
-}
 
 var trans = () => {
 	document.documentElement.classList.add('transition');
@@ -13,6 +9,17 @@ var trans = () => {
 		document.documentElement.classList.remove('transition');
 	}, 1000);
 };
+
+if (!theme) {
+	localStorage.setItem('current-theme', 'light');
+	theme = localStorage.getItem('current-theme');
+}
+if (theme === 'dark') {
+	dataThemeElements.forEach((item) => {
+		trans();
+		item.setAttribute('data-theme', 'dark');
+	});
+}
 
 themeButton.addEventListener('click', function () {
 	var currentTheme = localStorage.getItem('current-theme');
@@ -23,7 +30,7 @@ themeButton.addEventListener('click', function () {
 			trans();
 			item.setAttribute('data-theme', 'dark');
 		});
-	} else {
+	} else if (currentTheme === 'dark') {
 		localStorage.setItem('current-theme', 'light');
 		dataThemeElements.forEach((item) => {
 			trans();
@@ -31,3 +38,14 @@ themeButton.addEventListener('click', function () {
 		});
 	}
 });
+
+function hideShowMenu() {
+	var x = document.querySelector('#open-navbar1');
+	if (x.style.display === 'none') {
+		trans();
+		x.style.display = 'block';
+	} else {
+		trans();
+		x.style.display = 'none';
+	}
+}

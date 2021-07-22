@@ -9,21 +9,15 @@
 		<link rel="stylesheet" href="./assests/sass/style.css" />
 	</head>
 	<body>
-		<nav class="wrapper">
+		<nav class="wrapper" data-theme="light">
 			<div class="container">
 				<div class="navbar-header">
-					<button class="navbar-toggler" data-toggle="open-navbar1">
-						<span></span>
-						<span></span>
-						<span></span>
-					</button>
 					<a href="#">
 						<h4 data-theme="light">Subin<span>Shrestha</span></h4>
 					</a>
 				</div>
-
 				<div class="navbar-right">
-					<div class="navbar-menu" id="open-navbar1" data-theme="light">
+					<div class="navbar-menu" data-theme="light">
 						<ul class="navbar-nav">
 							<li><a href="#">Home</a></li>
 							<li><a href="#">About</a></li>
@@ -32,10 +26,65 @@
 						</ul>
 					</div>
 
+					<button class="btn navbar-toggler" data-toggle="open-navbar1" onclick="hideShowMenu()"></button>
 					<button class="btn theme-switcher" id="theme-switch" data-theme="light"></button>
 				</div>
 			</div>
 		</nav>
+		<div class="wrapper secondary-nav" id="open-navbar1" data-theme="light">
+			<div class="container secondary-nav-container">
+				<div class="secondary-nav-menu" data-theme="light">
+					<ul class="secondary-nav-nav">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Experience</a></li>
+						<li><a href="#">Projects</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapper content">
+			<div class="container">
+				<h1>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate temporibus quaerat porro ipsam sunt accusamus, tempore eaque quidem adipisci.
+					Aperiam autem excepturi quae sit? Numquam, unde. Placeat laborum dolore optio!
+				</h1>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="container">
+				<h1>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate temporibus quaerat porro ipsam sunt accusamus, tempore eaque quidem adipisci.
+					Aperiam autem excepturi quae sit? Numquam, unde. Placeat laborum dolore optio!
+				</h1>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="container">
+				<h1>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate temporibus quaerat porro ipsam sunt accusamus, tempore eaque quidem adipisci.
+					Aperiam autem excepturi quae sit? Numquam, unde. Placeat laborum dolore optio!
+				</h1>
+			</div>
+		</div>
+
+		<div class="wrapper">
+			<div class="container">
+				<h1>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate temporibus quaerat porro ipsam sunt accusamus, tempore eaque quidem adipisci.
+					Aperiam autem excepturi quae sit? Numquam, unde. Placeat laborum dolore optio!
+				</h1>
+			</div>
+		</div>
+		<div class="wrapper content-end">
+			<div class="container">
+				<h1>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate temporibus quaerat porro ipsam sunt accusamus, tempore eaque quidem adipisci.
+					Aperiam autem excepturi quae sit? Numquam, unde. Placeat laborum dolore optio!
+				</h1>
+			</div>
+		</div>
 	</body>
 
 	<script src="assests/js/index.js"></script>
