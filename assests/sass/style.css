@@ -343,7 +343,12 @@ nav[data-theme='dark'] {
           align-items: center;
   -ms-flex-wrap: wrap-reverse;
       flex-wrap: wrap-reverse;
-  height: 40rem;
+}
+
+@media only screen and (min-width: 450px) {
+  .home > .container {
+    height: 40rem;
+  }
 }
 
 .home > .container .home-text {
@@ -364,53 +369,70 @@ nav[data-theme='dark'] {
   margin: 1rem 2rem 1rem 0;
 }
 
-.home > .container .home-text .home-text-text .home-title {
-  margin: -5rem 0 1rem 0;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  font-size: clamp(1rem, 3rem, 4rem);
-  position: relative;
-  font-family: 'Source Code Pro', monospace;
+.home > .container .home-text .home-text-text {
   z-index: -999;
 }
 
-.home > .container .home-text .home-text-text .home-title::before,
-.home > .container .home-text .home-text-text .home-title::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.home > .container .home-text .home-text-text .home-title {
+  font-size: 2rem;
+  position: relative;
+  font-family: 'Source Code Pro', monospace;
 }
 
-.home > .container .home-text .home-text-text .home-title::before {
-  background: #f5f8fa;
-  -webkit-animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards;
-          animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards;
-}
-
-.home > .container .home-text .home-text-text .home-title::after {
-  width: 0.125em;
-  background: black;
-  -webkit-animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards, blink 750ms steps(var(--typewriterCharacters)) infinite;
-          animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards, blink 750ms steps(var(--typewriterCharacters)) infinite;
+@media only screen and (min-width: 450px) {
+  .home > .container .home-text .home-text-text .home-title {
+    margin: -5rem 0 1rem 0;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    font-size: clamp(1rem, 3rem, 4rem);
+  }
+  .home > .container .home-text .home-text-text .home-title::before,
+  .home > .container .home-text .home-text-text .home-title::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .home > .container .home-text .home-text-text .home-title::before {
+    background: #f5f8fa;
+    -webkit-animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards;
+            animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards;
+  }
+  .home > .container .home-text .home-text-text .home-title::after {
+    width: 0.125em;
+    background: black;
+    -webkit-animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards, blink 750ms steps(var(--typewriterCharacters)) infinite;
+            animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards, blink 750ms steps(var(--typewriterCharacters)) infinite;
+  }
 }
 
 .home > .container .home-text .home-text-text .home-subtitle {
   color: #6d6a7c;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 400;
-  opacity: 0;
-  -webkit-transform: translateY(3rem);
-          transform: translateY(3rem);
-  -webkit-animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
-          animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
 }
 
 .home > .container .home-text .home-text-text .subtitle-text {
-  font-size: 1rem;
+  font-size: 0.85rem;
+}
+
+@media only screen and (min-width: 450px) {
+  .home > .container .home-text .home-text-text .home-subtitle {
+    color: #6d6a7c;
+    font-size: 2rem;
+    font-weight: 400;
+    opacity: 0;
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    -webkit-animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+            animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+  }
+  .home > .container .home-text .home-text-text .subtitle-text {
+    font-size: 1rem;
+  }
 }
 
 @-webkit-keyframes typewriter {

@@ -4,7 +4,10 @@
 		justify-content: space-around;
 		align-items: center;
 		flex-wrap: wrap-reverse;
-		height: 40rem;
+
+		@media only screen and (min-width: 450px) {
+			height: 40rem;
+		}
 
 		.home-text {
 			flex: 2;
@@ -22,47 +25,63 @@
 			}
 
 			.home-text-text {
+				z-index: -999;
+
 				.home-title {
-					margin: -5rem 0 1rem 0;
-					width: max-content;
-					font-size: clamp(1rem, 3rem, 4rem);
+					font-size: 2rem;
 					position: relative;
 					font-family: 'Source Code Pro', monospace;
-					z-index: -999;
 				}
-				.home-title::before,
-				.home-title::after {
-					content: '';
-					position: absolute;
-					top: 0;
-					right: 0;
-					bottom: 0;
-					left: 0;
-				}
-				.home-title::before {
-					background: $body-background-light;
-					animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards;
-				}
+				@media only screen and (min-width: 450px) {
+					.home-title {
+						margin: -5rem 0 1rem 0;
+						width: max-content;
+						font-size: clamp(1rem, 3rem, 4rem);
+					}
+					.home-title::before,
+					.home-title::after {
+						content: '';
+						position: absolute;
+						top: 0;
+						right: 0;
+						bottom: 0;
+						left: 0;
+					}
+					.home-title::before {
+						background: $body-background-light;
+						animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards;
+					}
 
-				.home-title::after {
-					width: 0.125em;
-					background: black;
-					animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards,
-						blink 750ms steps(var(--typewriterCharacters)) infinite;
+					.home-title::after {
+						width: 0.125em;
+						background: black;
+						animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards,
+							blink 750ms steps(var(--typewriterCharacters)) infinite;
+					}
 				}
 
 				.home-subtitle {
 					color: $text-color;
-					font-size: 2rem;
+					font-size: 1rem;
 					font-weight: 400;
-					opacity: 0;
-					transform: translateY(3rem);
-					animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
 				}
 				.subtitle-text {
-					font-size: 1rem;
+					font-size: 0.85rem;
 				}
 
+				@media only screen and (min-width: 450px) {
+					.home-subtitle {
+						color: $text-color;
+						font-size: 2rem;
+						font-weight: 400;
+						opacity: 0;
+						transform: translateY(3rem);
+						animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+					}
+					.subtitle-text {
+						font-size: 1rem;
+					}
+				}
 				@keyframes typewriter {
 					to {
 						left: 100%;
