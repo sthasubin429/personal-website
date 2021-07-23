@@ -508,7 +508,15 @@ nav[data-theme='dark'] {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
-  height: 300px;
-  width: 300px;
+  height: 200px;
+  width: 200px;
+  margin: 1rem;
+}
+
+@media only screen and (min-width: 400px) {
+  .home > .container .home-img img {
+    height: 300px;
+    width: 300px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
