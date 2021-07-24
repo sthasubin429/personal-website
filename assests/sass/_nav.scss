@@ -123,6 +123,7 @@ nav[data-theme='dark'] {
 	bottom: 3rem;
 	left: 0;
 	background-color: $body-background-light;
+	z-index: 999;
 	.secondary-nav-container {
 		display: flex;
 		justify-content: center;

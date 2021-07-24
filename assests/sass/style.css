@@ -297,6 +297,7 @@ nav[data-theme='dark'] {
   bottom: 3rem;
   left: 0;
   background-color: #f5f8fa;
+  z-index: 999;
 }
 
 .secondary-nav .secondary-nav-container {
