@@ -41,10 +41,6 @@ html {
 	background-color: $body-background-light;
 }
 
-html[data-theme='dark'] {
-	background-color: $body-background-dark;
-}
-
 html.transition,
 html.transition *,
 html.transition *::before,

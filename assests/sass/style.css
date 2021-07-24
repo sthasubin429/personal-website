@@ -49,10 +49,6 @@ html {
   background-color: #f5f8fa;
 }
 
-html[data-theme='dark'] {
-  background-color: #2e2e2e;
-}
-
 html.transition,
 html.transition *,
 html.transition *::before,
@@ -148,6 +144,7 @@ nav {
   left: 0;
   background-color: #f5f8fa;
   height: 4rem;
+  z-index: 999;
 }
 
 @media only screen and (min-width: 576px) {
@@ -518,5 +515,196 @@ nav[data-theme='dark'] {
     height: 300px;
     width: 300px;
   }
+}
+
+.project {
+  background-color: #fff;
+  padding: 2rem 0;
+}
+
+.project > .container .project-title {
+  color: #3c4250;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2rem 0;
+}
+
+.project > .container .project-title::before {
+  content: url("../img/icons/processor.svg");
+  display: block;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  margin: 0 1rem;
+}
+
+.project > .container .project-title::after {
+  content: '';
+  display: none;
+  position: relative;
+  width: 150px;
+  height: 1px;
+  margin-left: 1rem;
+  background-color: #66f;
+}
+
+@media only screen and (min-width: 768px) {
+  .project > .container .project-title::after {
+    display: block;
+  }
+}
+
+.project > .container .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.project > .container .cards .card {
+  width: 20rem;
+  margin: 1rem;
+  background-color: #f5f8fa;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.project > .container .cards .card .card-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.project > .container .cards .card .card-title .title-icon {
+  width: 2rem;
+  height: 2rem;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.project > .container .cards .card .card-title .title-icon:hover {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.project > .container .cards .card .card-content .card-content-title {
+  color: #6d6a7c;
+  margin: 0.7rem 0;
+}
+
+.project > .container .cards .card .card-content .card-content-text {
+  color: #6d6a7c;
+}
+
+.project > .container .cards .card .card-footer {
+  margin: 1rem 0 2rem;
+  padding: 0.5rem 0 1rem;
+  line-height: 2;
+  margin-bottom: 0;
+}
+
+.project > .container .cards .card .card-footer a {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.5rem;
+  color: #6d6a7c;
+  font-size: 0.66rem;
+  border: 3px solid #6e57e0;
+  border-radius: 2rem;
+  padding: 0.2rem 0.85rem 0.25rem;
+  position: relative;
+}
+
+.project > .container .cards .card .card-footer a:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#ff8a00), to(#e52e71));
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  text-shadow: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-box-decoration-break: clone;
+  background-clip: text;
+  border-color: #8ecae6;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.project > .container .cards .card:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.project > .container .cards .card:hover .card-content .card-content-title {
+  color: #66f;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.project > .container .project-footer {
+  margin: 1rem;
+  padding-bottom: 1rem;
+  color: #a19fad;
+  text-align: center;
+}
+
+.project > .container .project-footer a {
+  color: #66f;
+}
+
+.project > .container .project-footer a img {
+  width: 1rem;
+  height: 1rem;
+}
+
+html[data-theme='dark'] {
+  background-color: #2e2e2e;
+}
+
+html[data-theme='dark'] .project {
+  background-color: #353535;
+}
+
+html[data-theme='dark'] .project > .container .project-title {
+  color: #f0eefc;
+}
+
+html[data-theme='dark'] .project > .container .project-title::after {
+  background-color: #f0eefc;
+}
+
+html[data-theme='dark'] .project > .container .cards .card {
+  background-color: #454851;
+}
+
+html[data-theme='dark'] .project > .container .cards .card .card-content .card-content-title {
+  color: #f0eefc;
+}
+
+html[data-theme='dark'] .project > .container .cards .card .card-content .card-content-text {
+  color: #f0eefc;
+}
+
+html[data-theme='dark'] .project > .container .cards .card .card-footer a {
+  color: #9197a5;
+  border: 3px solid #9197a5;
+}
+
+html[data-theme='dark'] .project > .container .cards .card .card-footer a:hover {
+  border-color: #6e57e0;
 }
 /*# sourceMappingURL=style.css.map */

@@ -4,6 +4,7 @@ nav {
 	left: 0;
 	background-color: $body-background-light;
 	height: 4rem;
+	z-index: 999;
 
 	@media only screen and (min-width: 576px) {
 		top: 0;
