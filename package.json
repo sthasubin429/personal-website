@@ -5,7 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"dev": "parcel src/index.html",
-		"build": "parcel build src/index.html"
+		"build": "parcel build src/index.html",
+		"deploy": "gh-pages -d dist"
 	},
 	"repository": {
 		"type": "git",
@@ -17,7 +18,7 @@
 	"bugs": {
 		"url": "https://github.com/sthasubin429/personal-website/issues"
 	},
-	"homepage": "https://github.com/sthasubin429/personal-website/dist",
+	"homepage": "https://github.com/sthasubin429/personal-website",
 	"devDependencies": {
 		"gh-pages": "^3.2.3",
 		"parcel-bundler": "^1.12.5",
