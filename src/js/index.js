@@ -39,7 +39,7 @@ themeButton.addEventListener('click', function () {
 	}
 });
 
-function hideShowMenu() {
+window.hideShowMenu = function () {
 	var x = document.querySelector('#open-navbar1');
 	if (x.style.display === 'none') {
 		trans();
@@ -48,4 +48,20 @@ function hideShowMenu() {
 		trans();
 		x.style.display = 'none';
 	}
-}
+};
+
+window.githubMouseOver = function (event) {
+	event.target.src = require('../img/icons/github-alt-light.svg');
+};
+
+window.githubMouseOut = function (event) {
+	event.target.src = require('../img/icons/github-alt.svg');
+};
+
+window.externalLinkMouseOver = function (event) {
+	event.target.src = require('../img/icons/external-link-light.svg');
+};
+
+window.externalLinkMouseOut = function (event) {
+	event.target.src = require('../img/icons/external-link-alt.svg');
+};
