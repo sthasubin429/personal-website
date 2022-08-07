@@ -1,38 +1,46 @@
 html[data-theme='dark'] {
-	background-color: $body-background-dark;
+  background-color: $body-background-dark;
 
-	.project {
-		background-color: $body-background-alt;
-		> .container {
-			.project-title {
-				color: $text-color-alt;
-			}
-			.project-title::after {
-				background-color: $text-color-alt;
-			}
-			.cards {
-				.card {
-					background-color: $body-color-dark;
+  .generic-title {
+    color: $text-color-alt;
 
-					.card-content {
-						.card-content-title {
-							color: $text-color-alt;
-						}
-						.card-content-text {
-							color: $text-color-alt;
-						}
-					}
-					.card-footer {
-						a {
-							color: $text-color-light-alt;
-							border: 3px solid $text-color-light-alt;
-						}
-						a:hover {
-							border-color: $first-color;
-						}
-					}
-				}
-			}
-		}
-	}
+    &::after {
+      background-color: $text-color-alt;
+    }
+  }
+
+  .project {
+    background-color: $body-background-alt;
+    > .container {
+      .project-title {
+        color: $text-color-alt;
+      }
+      .project-title::after {
+        background-color: $text-color-alt;
+      }
+      .cards {
+        .card {
+          background-color: $body-color-dark;
+
+          .card-content {
+            .card-content-title {
+              color: $text-color-alt;
+            }
+            .card-content-text {
+              color: $text-color-alt;
+            }
+          }
+          .card-footer {
+            a {
+              color: $text-color-light-alt;
+              border: 3px solid $text-color-light-alt;
+            }
+            a:hover {
+              border-color: $first-color;
+            }
+          }
+        }
+      }
+    }
+  }
 }

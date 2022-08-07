@@ -1,0 +1,39 @@
+.language {
+  background-color: #fff;
+  padding: 2rem 0;
+
+  > .container {
+    .language-title {
+      &::before {
+        content: url('../img/icons/laptop.svg');
+      }
+      &::after {
+        width: 80px;
+      }
+    }
+
+    .language-img-container {
+      max-width: 600px;
+      margin: 0 auto;
+
+      .language-images {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        img {
+          margin: 1rem;
+
+          &:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+          }
+        }
+      }
+    }
+  }
+
+  [data-theme='dark'] & {
+    background-color: $body-background-alt;
+  }
+}
