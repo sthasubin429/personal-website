@@ -7,6 +7,9 @@
       &::before {
         content: url('../img/icons/laptop.svg');
       }
+      &::after {
+        width: 80px;
+      }
     }
 
     .language-img-container {
