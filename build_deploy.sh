@@ -11,6 +11,7 @@ npm run build
 
 # copy CNAME into dist
 cp CNAME dist/
+cp robots.txt dist/
 
 echo "Deploying ..."
 
