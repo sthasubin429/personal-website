@@ -2,7 +2,6 @@
 	"name": "personal-website",
 	"version": "1.0.0",
 	"description": "My Portfolio Website. Available at: https://www.subinstha.com.np/",
-	"main": "index.js",
 	"scripts": {
 		"dev": "parcel src/index.html",
 		"build": "parcel build src/index.html",
@@ -20,8 +19,9 @@
 	},
 	"homepage": "https://github.com/sthasubin429/personal-website",
 	"devDependencies": {
+		"@parcel/transformer-sass": "^2.8.3",
 		"gh-pages": "^3.2.3",
-		"parcel-bundler": "^1.12.5",
+		"parcel": "^2.8.3",
 		"sass": "^1.37.5"
 	},
 	"dependencies": {

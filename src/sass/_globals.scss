@@ -1,51 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap');
+
 html {
-	font-size: 100%;
-	box-sizing: border-box; //inludes padding in the final size of element
+  font-size: 100%;
+  box-sizing: border-box; //includes padding in the final size of element
   scroll-behavior: smooth;
 }
+
 * {
-	margin: 0px;
-	padding: 0px;
-	font-family: 'Noto Sans SC', sans-serif;
-	line-height: 1.6;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Noto Sans SC', sans-serif;
+  line-height: 1.6;
 }
+
 //inherits box sizing property to all tags
 *,
 *::before,
 *::after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 a {
-	text-decoration: none;
-	color: $text-color;
+  text-decoration: none;
+  color: $text-color;
 }
+
 ul {
-	list-style-type: none;
+  list-style-type: none;
 }
+
 *::-webkit-scrollbar {
-	width: 0.5rem; /* width of the entire scrollbar */
+  width: 0.5rem; /* width of the entire scrollbar */
 }
 
 *::-webkit-scrollbar-track {
-	background: $hover-background; /* color of the tracking area */
-	border-radius: 0.2rem;
+  background: $hover-background; /* color of the tracking area */
+  border-radius: 0.2rem;
 }
 
 *::-webkit-scrollbar-thumb {
-	background-color: $scrollbar-background; /* color of the scroll thumb */
-	border-radius: 0.3rem;
+  background-color: $scrollbar-background; /* color of the scroll thumb */
+  border-radius: 0.3rem;
 }
 
 html {
-	background-color: $body-background-light;
+  background-color: $body-background-light;
 }
 
 html.transition,
 html.transition *,
 html.transition *::before,
 html.transition *::after {
-	transition: all 750ms !important;
-	transition-delay: 0 !important;
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
 }
