@@ -4,7 +4,7 @@
 	"description": "My Portfolio Website. Available at: https://www.subinstha.com.np/",
 	"scripts": {
 		"dev": "parcel src/index.html",
-		"build": "parcel build src/index.html",
+		"build": "parcel build src/index.html --public-url https://www.subinstha.com.np",
 		"deploy": "gh-pages -d dist"
 	},
 	"repository": {
