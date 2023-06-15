@@ -11,7 +11,7 @@ let trans = () => {
 };
 
 if (!theme) {
-  localStorage.setItem('current-theme', 'light');
+  localStorage.setItem('current-theme', 'dark');
   theme = localStorage.getItem('current-theme');
 }
 if (theme === 'dark') {
