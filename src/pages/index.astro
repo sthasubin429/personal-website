@@ -1,18 +1,35 @@
 ---
+import Experiences from '../components/Experiences.astro';
 import Intro from '../components/Intro.astro';
 import Sidebar from '../components/Sidebar.astro';
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
-
 ---
 
 <Layout>
-  <div class="w-full flex justify-center items-start" style="background: radial-gradient(6000px at 91px 122px, rgba(29, 78, 216, 0.15), transparent 80%);">
-    <div class="w-full max-w-7xl h-screen flex flex-col lg:flex-row justify-start lg:justify-between items-start text-slate-400 gap-16 lg:gap-20 p-8">
-      <Sidebar />
-       <div class='w-full'>
-        <Intro />
-      </div>
+  <div class="w-full flex justify-center items-start">
+    <div
+      class="w-full max-w-7xl min-h-screen lg:h-screen flex flex-col lg:flex-row text-slate-400 p-1.5 lg:p-4 gap-2 lg:overflow-hidden"
+      role="main"
+      aria-label="Main Content"
+    >
+      <!-- SideBar Section -->
+      <aside
+        aria-label="Sidebar Navigation"
+        class="w-full lg:w-[380px] h-auto lg:h-full px-4 py-8 lg:py-16 flex flex-col justify-start
+        lg:justify-between items-start flex-shrink-0"
+      >
+        <Sidebar />
+      </aside>
+
+      <!-- Main Section -->
+      <section
+        class="flex-1 h-auto lg:h-full lg:overflow-y-auto overflow-x-visible hide-scrollbar"
+        aria-labelledby="intro-heading"
+      >
+        <Intro id="intro-heading" />
+        <Experiences />
+      </section>
     </div>
   </div>
 </Layout>

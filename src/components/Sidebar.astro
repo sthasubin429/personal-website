@@ -1,33 +1,56 @@
 ---
-import github from '../assets/icons/github-original.svg';
 import IconGithub from './icons/IconGithub.astro';
 import IconLinkedin from './icons/IconLinkedin.astro';
 import IconYoutube from './icons/IconYoutube.astro';
 import IconEmail from './icons/IconEmail.astro';
 ---
 
-<section class='w-full h-fit lg:h-full max-w-md py-4 lg:py-16 flex flex-col justify-start lg:justify-between items-start'>
-  <div>
-    <div>
-      <h2 class='text-4xl md:text-5xl font-semibold font-sans mb-2 text-slate-200'>Subin Shrestha</h2>
-      <p class='text-slate-200 mb-2'>Software Engineer | Data Analyst</p>
-      <p>I transform complex data into actionable insights through statistical analysis and machine learning.</p>
-    </div>
-  </div>
+<div>
+  <h1 class="text-4xl md:text-5xl font-semibold font-sans mb-2 text-slate-200">Subin Shrestha</h1>
+  <p class="text-slate-200 mb-2">
+    <span>Software Engineer</span> | <span>Data Analyst</span>
+  </p>
+  <p>
+    I transform complex data into actionable insights through statistical analysis and machine
+    learning.
+  </p>
+</div>
 
-  <div class='flex justify-start items-center gap-6 mt-6 text-slate-400'>
-    <a href='https://github.com/sthasubin429' target='_blank' rel='noopener noreferrer'>
-      <IconGithub alt='Github' />
-    </a>
-    <a href='https://www.linkedin.com/in/subinsth/' target='_blank' rel='noopener noreferrer'>
-      <IconLinkedin alt='Linkedin' />
-    </a>
-
-    <a href='mailto:subinshrestha922@gmail.com' target='_blank' rel='noopener noreferrer'>
-      <IconEmail alt='Email' height='32' width='32' />
-    </a>
-    <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ' target='_blank' rel='noopener noreferrer'>
-      <IconYoutube alt='YouTube' height='32' width='32' />
-    </a>
-  </div>
-</section>
+<nav aria-label="Social links" class="flex justify-start items-center gap-6 mt-6 text-slate-400">
+  <a
+    href="https://github.com/sthasubin429"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="GitHub profile of Subin Shrestha"
+    title="GitHub"
+  >
+    <IconGithub alt="GitHub icon" />
+  </a>
+  <a
+    href="https://www.linkedin.com/in/subinsth/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="LinkedIn profile of Subin Shrestha"
+    title="LinkedIn"
+  >
+    <IconLinkedin alt="LinkedIn icon" />
+  </a>
+  <a
+    href="mailto:subinshrestha922@gmail.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Send email to Subin Shrestha"
+    title="Email"
+  >
+    <IconEmail alt="Email icon" height="32" width="32" />
+  </a>
+  <a
+    href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="YouTube channel of Subin Shrestha"
+    title="YouTube"
+  >
+    <IconYoutube alt="YouTube icon" height="32" width="32" />
+  </a>
+</nav>
