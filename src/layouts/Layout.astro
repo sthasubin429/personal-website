@@ -1,22 +1,47 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+import gibliPng from '../assets/Gibli_01.png';
+import gibliJpg from '../assets/Gibli.jpg';
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+const { title = 'Subin Shrestha', description = 'Software Engineer' } = Astro.props;
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name='description' content={description} />
+
+    <!-- Facebook -->
+    <meta property='og:url' content='https://www.subinstha.com.np/' />
+    <meta property='og:type' content='website' />
+    <meta property='og:title' content={title} />
+    <meta property='og:description' content={description} />
+    <meta property='og:image' content={gibliJpg.src} />
+
+    <!-- Twitter -->
+    <meta name='twitter:card' content='summary_large_image' />
+    <meta property='twitter:domain' content='subinstha.com.np' />
+    <meta property='twitter:url' content='https://www.subinstha.com.np/' />
+    <meta name='twitter:title' content={title} />
+    <meta name='twitter:description' content={description} />
+    <meta name='twitter:image' content={gibliJpg.src} />
+
+    <link rel='icon' href={gibliPng.src} type='image/png' />
+    <style>
+      html,
+      body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body class='bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900'>
+    <slot />
+  </body>
+</html>

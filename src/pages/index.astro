@@ -1,11 +1,18 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import Intro from '../components/Intro.astro';
+import Sidebar from '../components/Sidebar.astro';
 import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <div class="w-full flex justify-center items-start" style="background: radial-gradient(6000px at 91px 122px, rgba(29, 78, 216, 0.15), transparent 80%);">
+    <div class="w-full max-w-7xl h-screen flex flex-col lg:flex-row justify-start lg:justify-between items-start text-slate-400 gap-16 lg:gap-20 p-8">
+      <Sidebar />
+       <div class='w-full'>
+        <Intro />
+      </div>
+    </div>
+  </div>
 </Layout>
