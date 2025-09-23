@@ -1,0 +1,16 @@
+---
+// Props: href (string), children (slot), optional class (string)
+const { href = '#', class: customClass = '', label = 'Link' } = Astro.props;
+---
+
+<a
+  href={href}
+  class={`*:font-mono focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 transition-colors relative ${customClass} group`}
+  aria-label={label}
+>
+  <span
+    class="inline-block relative text-inherit before:content-[''] before:absolute before:left-0 before:bottom-[4px] before:w-full before:h-[0.1px] before:bg-teal-500 before:scale-x-0 before:transition-transform before:duration-300 before:origin-left group-hover:text-teal-500 group-focus:text-teal-500 group-hover:before:scale-x-100 group-focus:before:scale-x-100"
+  >
+    <slot />
+  </span>
+</a>

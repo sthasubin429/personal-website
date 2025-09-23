@@ -1,0 +1,15 @@
+---
+// Props for the MenuLink component
+const { href = "#", label = "", className = "" } = Astro.props;
+---
+
+<li
+  class={`mobile-menu-item my-3 transform transition-all duration-300 delay-75 translate-y-4 opacity-0 ${className}`}
+>
+  <a
+    href={href}
+    class="hover:text-teal-500 transition-colors duration-200 text-lg py-2 px-4 block mobile-menu-link"
+  >
+    {label}
+  </a>
+</li>

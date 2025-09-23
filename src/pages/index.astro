@@ -1,13 +1,23 @@
 ---
+import Navbar from '@components/Navbar.astro';
 import Experiences from '../components/Experiences.astro';
 import Intro from '../components/Intro.astro';
 import Sidebar from '../components/Sidebar.astro';
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
+import Hero from '@components/Hero.astro';
+import About from '@components/About.astro';
 ---
 
 <Layout>
-  <div class="w-full flex justify-center items-start">
+  <div class="w-full">
+    <div class="w-full max-w-7xl mx-auto px-4">
+      <Navbar />
+      <Hero />
+      <About />
+    </div>
+  </div>
+  <div class="w-full flex justify-center items-start hidden">
     <div
       class="w-full max-w-7xl min-h-screen lg:h-screen flex flex-col lg:flex-row text-slate-400 p-1.5 lg:p-4 gap-2 lg:overflow-hidden"
       role="main"
