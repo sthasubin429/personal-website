@@ -13,7 +13,7 @@ const { years, role, company, link, description, keywords } = Astro.props;
 >
   <div
     class='absolute inset-y-0 inset-x-0 z-0 hidden rounded-md transition duration-300 group-hover:block group-hover:bg-white/5 pointer-events-none'
-    aria-hidden="true"
+    aria-hidden='true'
   >
   </div>
 
@@ -27,11 +27,17 @@ const { years, role, company, link, description, keywords } = Astro.props;
       {role} &#183; {company}
       <ArrowUpRight
         class='inline w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-teal-400'
-        aria-hidden="true"
-        focusable="false"
+        aria-hidden='true'
+        focusable='false'
       />
     </h1>
-    <p>{description}</p>
+    <ul class='list-disc list-outside text-slate-400 my-2 ml-5'>
+      {
+        description.map((item: string) => (
+          <li class='mb-1 [&>span]:text-slate-200 [&>span]:font-medium' set:html={item} />
+        ))
+      }
+    </ul>
     <ul class='flex flex-wrap gap-2 mt-2'>
       {
         keywords.map((keyword: string) => (
