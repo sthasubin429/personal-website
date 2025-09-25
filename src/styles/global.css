@@ -8,6 +8,7 @@
     'Segoe UI Symbol', 'Noto Color Emoji';
   --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
   --color-test: #6e57e0;
+  --color-light-navy: #112240;
 }
 
 @layer base {

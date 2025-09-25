@@ -1,0 +1,15 @@
+---
+const { href, text, label, external } = Astro.props;
+---
+
+<a
+  href={href}
+  class='inline-block py-4 px-6 border border-teal-300 text-teal-300 rounded-md transition-all duration-300 hover:outline-none hover:shadow-[4px_4px_0_0_theme(colors.teal.300)] hover:-translate-x-[5px] hover:-translate-y-[5px]'
+  aria-label={label ? label : text}
+  target={external ? '_blank' : '_self'}
+  rel={external ? 'noopener noreferrer' : undefined}
+>
+  <span class='relative z-10'>
+    {text}
+  </span>
+</a>
