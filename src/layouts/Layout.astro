@@ -1,37 +1,37 @@
 ---
-import gibliPng from '../assets/Gibli_01.png';
-import gibliJpg from '../assets/Gibli.jpg';
+import gibliPng from '../../public/assets/Gibli_01.png';
+import gibliJpg from '../../public/assets/Gibli.jpg';
 
 const { title = 'Subin Shrestha', description = 'Software Engineer' } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang='en'>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
 
     <!-- Primary Meta Tags -->
     <title>{title}</title>
-    <meta name="description" content={description} />
+    <meta name='description' content={description} />
 
     <!-- Facebook -->
-    <meta property="og:url" content="https://www.subinstha.com.np/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={gibliJpg.src} />
+    <meta property='og:url' content='https://www.subinstha.com.np/' />
+    <meta property='og:type' content='website' />
+    <meta property='og:title' content={title} />
+    <meta property='og:description' content={description} />
+    <meta property='og:image' content={gibliJpg.src} />
 
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content="subinstha.com.np" />
-    <meta property="twitter:url" content="https://www.subinstha.com.np/" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={gibliJpg.src} />
+    <meta name='twitter:card' content='summary_large_image' />
+    <meta property='twitter:domain' content='subinstha.com.np' />
+    <meta property='twitter:url' content='https://www.subinstha.com.np/' />
+    <meta name='twitter:title' content={title} />
+    <meta name='twitter:description' content={description} />
+    <meta name='twitter:image' content={gibliJpg.src} />
 
-    <link rel="icon" href={gibliPng.src} type="image/png" />
+    <link rel='icon' href={gibliPng.src} type='image/png' />
     <style>
       html,
       body {
@@ -42,8 +42,8 @@ const { title = 'Subin Shrestha', description = 'Software Engineer' } = Astro.pr
     </style>
   </head>
   <body
-    class="leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900"
-    style="background: linear-gradient(rgba(29, 78, 216, 0.15), rgba(29, 78, 216, 0.15)), oklch(20.8% 0.042 265.755);"
+    class='leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900'
+    style='background: linear-gradient(rgba(29, 78, 216, 0.15), rgba(29, 78, 216, 0.15)), oklch(20.8% 0.042 265.755);'
   >
     <slot />
   </body>

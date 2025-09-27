@@ -1,6 +1,6 @@
-import customerChurn from '../assets/customerChurn.jpg';
-import musicPlayer from '../assets/musicPlayer.jpg';
-import streetFighter from '../assets/streetFighter.jpg';
+import customerChurn from '../../public/assets/customerChurn.jpg';
+import musicPlayer from '../../public/assets/musicPlayer.jpg';
+import streetFighter from '../../public/assets/streetFighter.jpg';
 import type { ProjectType } from './types';
 
 export const featuredProjects: ProjectType[] = [
