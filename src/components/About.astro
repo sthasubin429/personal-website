@@ -1,0 +1,88 @@
+---
+import gibliJpg from '../assets/Gibli.jpg';
+import Link from './Shared/Link.astro';
+import Pill from './Shared/Pill.astro';
+
+const tools = [
+  'Python',
+  'R',
+  'SQL',
+  'Pandas',
+  'NumPy',
+  'Scikit-learn',
+  'TensorFlow',
+  'Power BI',
+  'Tableau',
+  'Git',
+  'Docker',
+  'JavaScript',
+  'React',
+  'Angular',
+  'TypeScript',
+  'Tailwind CSS',
+  'Ruby on Rails',
+];
+---
+
+<div class='p-4 md:p-10 lg:p-40' id="about" aria-labelledby="about-heading">
+  <h2 class='text-2xl font-bold text-slate-200 mb-6'>About Me</h2>
+  <div class='flex flex-col md:flex-row justify-start items-centeritems-start gap-6'>
+    <div class='space-y-4'>
+      <p>
+        Hello! My name is Subin and I enjoy creating things that solve real-world problems with
+        data. My interest in programming started during my Computer Science degree when I discovered
+        how code could bring ideas to life, turns out building my first web application taught me a
+        lot about the power of technology to connect people!
+      </p>
+      <p>
+        Fast forward to today, I've had the privilege of working at a
+        <Link href='https://www.outcodesoftware.com/'>fast-paced startup</Link>,
+        <Link href='https://bajratechnologies.com/'>established tech companies</Link>, and now in
+        academic research. My main focus these days is building data-driven solutions and machine
+        learning models at Langara College's
+        <Link href='https://students.langara.ca/about-langara/applied-research/index.html'>Applied Research Center</Link>,
+        where I analyze complex datasets and create insights that support important research
+        initiatives.
+      </p>
+      <p>
+        When I'm not analyzing datasets, I enjoy working on personal projects like building
+        AI-powered applications and exploring new machine learning techniques that push the
+        boundaries of what's possible with data.
+      </p>
+      <div>
+        <p>Few technologies I have been working with recently:</p>
+
+        <div class='flex flex-wrap justify-start items-center gap-2 mt-2'>
+          {tools.map(tool => <Pill key={tool} text={tool} />)}
+        </div>
+      </div>
+    </div>
+
+    <div class='flex-shrink-0 w-[300px] h-[300px] relative group cursor-pointer'>
+      <!-- Border effect with initial offset -->
+      <div
+        class='absolute top-3 left-3 w-full h-full border-2 border-teal-300 rounded-lg transform transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:translate-y-1'
+      >
+      </div>
+      <!-- Image container -->
+      <div
+        class='relative
+        z-10
+        w-full
+        h-full
+        transform
+        transition-all
+        duration-300
+        ease-out group-hover:-translate-x-1 group-hover:-translate-y-1'
+      >
+        <img
+          src={gibliJpg.src}
+          alt='Description of image'
+          width='500'
+          height='500'
+          class='w-full h-full object-cover rounded-lg shadow-md'
+        />
+      </div>
+    </div>
+  </div>
+</div>

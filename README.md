@@ -1,17 +1,10 @@
-# Portfolio
+# Personal Website
 
-My Portfolio Website. Available at: https://www.subinstha.com.np/
+## Original Desings
+[Brittany Chiang](https://brittanychiang.com/)
 
-## References
+## Images Used
+Illustration by <a href="https://unsplash.com/@tomsdesign?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Toms Štāls</a> on <a href="https://unsplash.com/illustrations/a-group-of-people-working-on-a-large-screen-mEwYP78-Rfw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
--  https://www.youtube.com/watch?v=27JtRAI3QO8&t=2015s
--  https://www.youtube.com/watch?v=29deL9MFfWc
--  https://brittanychiang.com/
--  https://www.youtube.com/watch?v=w1nhwUGsG6M&t=408s
+Photo by <a href="https://unsplash.com/@fhavlik?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Filip</a> on <a href="https://unsplash.com/photos/black-and-white-candybar-phone-VHf4jqrUu7g?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
-## Resources
-
--  https://iconscout.com/unicons/explore/line
--  https://fonts.google.com/specimen/Noto+Sans
--  https://unsplash.com/photos/i8HghZQfoSE
--  [readme.so](https://readme.so/)

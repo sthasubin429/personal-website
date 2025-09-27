@@ -1,0 +1,68 @@
+---
+import IconGithub from '@components/icons/IconGithub.astro';
+import Pill from './Pill.astro';
+import { ExternalLink } from '@lucide/astro';
+import type { ProjectType } from '../../utils/types';
+
+const { title, description, imageUrl, projectUrl, repoUrl, techStack } = Astro.props as ProjectType;
+---
+
+<div
+  class="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8 max-w-4xl p-4 md:p-8 relative group "
+>
+  <div
+    class="absolute inset-0 z-0 opacity-0 rounded-md transition-opacity duration-300 group-hover:opacity-100 group-hover:bg-white/5 pointer-events-none"
+    aria-hidden="true"
+  >
+  </div>
+  <div class="w-full md:w-3/5 max-w-3xl h-40 sm:h-60 md:h-80">
+    <img src={imageUrl} alt="" class="h-full w-full rounded-md" />
+  </div>
+  <div class="w-full md:w-2/5 flex flex-col items-start md:items-end gap-2 mt-4 md:mt-0">
+    <p class="text-xs sm:text-sm font-mono text-teal-300">Featured Project</p>
+    <h2
+      class="text-lg sm:text-lg font-bold text-slate-200 hover:text-teal-300 transition duration-200 cursor-pointer"
+    >
+      {title}
+    </h2>
+    <div class="bg-light-navy p-3 sm:p-4 rounded-md shadow-md w-full md:w-[500px]">
+      <p
+        class="text-start md:text-end text-xs sm:text-sm [&>span]:font-medium [&>span]:text-teal-300"
+        set:html={description}
+      />
+    </div>
+    <ul class="w-full flex flex-wrap gap-1 justify-start md:justify-end">
+      {techStack.map((stack: string) => <Pill key={stack} text={stack} />)}
+    </ul>
+    <div class="flex gap-4 mt-2">
+      {
+        repoUrl && (
+          <a
+            href={repoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub profile of Subin Shrestha"
+            title="GitHub"
+            class="text-slate-400 hover:text-teal-300 transition-colors duration-350 hover:scale-120"
+          >
+            <IconGithub alt="GitHub icon" />
+          </a>
+        )
+      }
+      {
+        projectUrl && (
+          <a
+            href={projectUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Project link"
+            title="Project"
+            class="text-slate-400 hover:text-teal-300 transition-colors duration-350 hover:scale-120"
+          >
+            <ExternalLink />
+          </a>
+        )
+      }
+    </div>
+  </div>
+</div>
