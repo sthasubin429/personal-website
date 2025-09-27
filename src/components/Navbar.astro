@@ -11,7 +11,7 @@ import MainLink from './Navbar/MainLink.astro';
   <div class='container mx-auto h-16 flex flex-nowrap items-center justify-between'>
     <div class='flex items-center'>
       <a href='#' class='font-medium'>
-        <h4 class='text-xl font-semibold'>
+        <h4 class='text-xl font-semibold float-down'>
           Subin<span class='text-teal-300'>Shrestha</span>
         </h4>
       </a>
@@ -19,16 +19,16 @@ import MainLink from './Navbar/MainLink.astro';
     <div class='flex justify-evenly items-center font-mono'>
       <div class='hidden sm:block'>
         <ul class='flex flex-row items-center justify-end ml-2'>
-          <li class='mx-4'>
+          <li class='mx-4 float-down'>
             <MainLink href='#about'> About </MainLink>
           </li>
-          <li class='mx-4'>
+          <li class='mx-4 float-down-delay-1'>
             <MainLink href='#projects'> Projects </MainLink>
           </li>
-          <li class='mx-4'>
+          <li class='mx-4 float-down-delay-2'>
             <MainLink href='#experience'> Experience </MainLink>
           </li>
-          <li class='mx-4'>
+          <li class='mx-4 float-down-delay-3'>
             <MainLink href='#contact'> Contact </MainLink>
           </li>
         </ul>
