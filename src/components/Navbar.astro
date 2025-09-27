@@ -5,40 +5,39 @@ import MainLink from './Navbar/MainLink.astro';
 ---
 
 <nav
-  id="navbar"
-  class="fixed bottom-0 left-0 w-full h-16 z-[999] sm:top-0 sm:left-0 px-4 backdrop-blur-xs transition-transform duration-300 ease-in-out"
-  class="fixed bottom-0 left-0 w-full h-16 z-[999] sm:top-0 sm:left-0 px-4 backdrop-blur-xs transition-transform duration-300 ease-in-out sm:translate-y-0"
+  id='navbar'
+  class='fixed bottom-0 left-0 w-full h-16 z-[999] sm:top-0 sm:left-0 px-4 backdrop-blur-xs transition-transform duration-300 ease-in-out sm:translate-y-0'
 >
-  <div class="container mx-auto h-16 flex flex-nowrap items-center justify-between">
-    <div class="flex items-center">
-      <a href="#" class="font-medium">
-        <h4 class="text-xl font-semibold">
-          Subin<span class="text-teal-300">Shrestha</span>
+  <div class='container mx-auto h-16 flex flex-nowrap items-center justify-between'>
+    <div class='flex items-center'>
+      <a href='#' class='font-medium'>
+        <h4 class='text-xl font-semibold'>
+          Subin<span class='text-teal-300'>Shrestha</span>
         </h4>
       </a>
     </div>
-    <div class="flex justify-evenly items-center font-mono">
-      <div class="hidden sm:block">
-        <ul class="flex flex-row items-center justify-end ml-2">
-          <li class="mx-4">
-            <MainLink href="#about"> About </MainLink>
+    <div class='flex justify-evenly items-center font-mono'>
+      <div class='hidden sm:block'>
+        <ul class='flex flex-row items-center justify-end ml-2'>
+          <li class='mx-4'>
+            <MainLink href='#about'> About </MainLink>
           </li>
-          <li class="mx-4">
-            <MainLink href="#projects"> Projects </MainLink>
+          <li class='mx-4'>
+            <MainLink href='#projects'> Projects </MainLink>
           </li>
-          <li class="mx-4">
-            <MainLink href="#experience"> Experience </MainLink>
+          <li class='mx-4'>
+            <MainLink href='#experience'> Experience </MainLink>
           </li>
-          <li class="mx-4">
-            <MainLink href="#contact"> Contact </MainLink>
+          <li class='mx-4'>
+            <MainLink href='#contact'> Contact </MainLink>
           </li>
         </ul>
       </div>
       <!-- Mobile menu toggle button -->
       <button
-        id="mobile-menu-toggle"
-        class="block sm:hidden p-2 relative"
-        aria-label="Toggle mobile menu"
+        id='mobile-menu-toggle'
+        class='block sm:hidden p-2 relative'
+        aria-label='Toggle mobile menu'
       >
         <LayoutGrid />
       </button>
@@ -47,15 +46,16 @@ import MainLink from './Navbar/MainLink.astro';
 
   <!-- Mobile menu with smooth slide animation -->
   <div
-    id="mobile-menu"
-    class="fixed bottom-16 left-0 w-full z-[999] lg:hidden shadow-lg transform transition-all duration-300 ease-in-out translate-y-full opacity-0 pointer-events-none bg-white/10 backdrop-blur-sm"
+    id='mobile-menu'
+    class='fixed bottom-16 left-0 w-full z-[999] lg:hidden transform transition-all duration-300 ease-in-out translate-y-full opacity-0 pointer-events-none backdrop-blur-xs'
+    style='background: linear-gradient(rgba(29, 78, 216, 0.15), rgba(29, 78, 216, 0.15)), oklch(20.8% 0.042 265.755);'
   >
-    <div class="flex justify-center">
-      <ul class="text-center m-2 py-4">
-        <MenuLinks href="#about" label="About" />
-        <MenuLinks href="#projects" label="Projects" />
-        <MenuLinks href="#experience" label="Experience" />
-        <MenuLinks href="#contact" label="Contact" />
+    <div class='flex justify-center'>
+      <ul class='text-center m-2 py-4'>
+        <MenuLinks href='#about' label='About' />
+        <MenuLinks href='#projects' label='Projects' />
+        <MenuLinks href='#experience' label='Experience' />
+        <MenuLinks href='#contact' label='Contact' />
       </ul>
     </div>
   </div>
