@@ -81,22 +81,25 @@ const experiences = [
 ];
 ---
 
-<section class="w-full mt-4" aria-labelledby="experience-heading">
-  <h2 id="experience-heading" class="text-xl font-semibold p-4 text-slate-200 mb-4 block lg:hidden">
-    Experience
-  </h2>
-  <div class="flex flex-col" role="list">
+<section class='w-full p-4 md:p-10 lg:p-16' aria-labelledby='experience-heading' id='experience'>
+  <h2 class='text-2xl font-bold text-slate-200 mb-6 scroll-float-up'>Experience</h2>
+  <div class='flex flex-col space-y-2 lg:space-y-4 relative' role='list'>
+    <!-- Timeline line (desktop only) -->
+    <div class='hidden lg:block absolute left-[166px] top-4 bottom-4 w-px bg-slate-700/50'></div>
+
     {
-      experiences.map(exp => (
-        <ExperienceCard
-          role={exp.role}
-          company={exp.company}
-          years={exp.duration}
-          description={exp.description}
-          link={exp.link}
-          keywords={exp.keywords}
-          aria-label={`${exp.role} at ${exp.company}, ${exp.duration}`}
-        />
+      experiences.map((exp, index) => (
+        <div class={`scroll-float-up${index > 0 ? `-delay-${Math.min(index, 3)}` : ''}`}>
+          <ExperienceCard
+            role={exp.role}
+            company={exp.company}
+            years={exp.duration}
+            description={exp.description}
+            link={exp.link}
+            keywords={exp.keywords}
+            aria-label={`${exp.role} at ${exp.company}, ${exp.duration}`}
+          />
+        </div>
       ))
     }
   </div>
