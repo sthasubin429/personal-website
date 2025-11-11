@@ -121,21 +121,21 @@ const categories = ['All', 'Data Analytics', 'Software Engineering', 'Other'];
           // Show item
           setTimeout(() => {
             item.classList.remove('hidden');
-            item.style.opacity = '0';
-            item.style.transform = 'translateY(20px)';
+            (item as HTMLElement).style.opacity = '0';
+            (item as HTMLElement).style.transform = 'translateY(20px)';
 
             requestAnimationFrame(() => {
-              item.style.transition = 'opacity 0.4s ease-out, transform 0.4s ease-out';
-              item.style.opacity = '1';
-              item.style.transform = 'translateY(0)';
+              (item as HTMLElement).style.transition = 'opacity 0.4s ease-out, transform 0.4s ease-out';
+              (item as HTMLElement).style.opacity = '1';
+              (item as HTMLElement).style.transform = 'translateY(0)';
             });
           }, index * 30); // Stagger animation
 
           visibleCount++;
         } else {
           // Hide item
-          item.style.opacity = '0';
-          item.style.transform = 'translateY(-20px)';
+          (item as HTMLElement).style.opacity = '0';
+          (item as HTMLElement).style.transform = 'translateY(-20px)';
           setTimeout(() => {
             item.classList.add('hidden');
           }, 300);
