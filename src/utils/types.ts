@@ -6,3 +6,12 @@ export type ProjectType = {
   repoUrl?: string;
   techStack: string[];
 };
+
+export type ArchiveProjectType = {
+  year: number;
+  title: string;
+  techStack: string[];
+  projectUrl?: string;
+  repoUrl?: string;
+  category: 'Data Analytics' | 'Software Engineering' | 'Other';
+};

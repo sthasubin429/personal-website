@@ -1,0 +1,63 @@
+---
+import { ExternalLink, Github } from '@lucide/astro';
+import Pill from './Pill.astro';
+import type { ArchiveProjectType } from '../../utils/types';
+
+interface Props extends ArchiveProjectType {}
+
+const { year, title, techStack, projectUrl, repoUrl } = Astro.props;
+---
+
+<div
+  class='group relative w-full p-4 rounded-md transition-all duration-300 hover:bg-white/5'
+  data-category={Astro.props.category}
+>
+  <div class='grid grid-cols-1 md:grid-cols-[80px_1fr_2fr_80px] gap-4 md:gap-6 items-start md:items-center'>
+    <!-- Year -->
+    <div class='text-teal-300 font-mono text-sm md:text-base'>
+      {year}
+    </div>
+
+    <!-- Title -->
+    <div class='order-1 md:order-none'>
+      <h3 class='text-slate-200 font-semibold text-base md:text-lg group-hover:text-teal-300 transition-colors duration-200'>
+        {title}
+      </h3>
+    </div>
+
+    <!-- Tech Stack -->
+    <div class='flex flex-wrap gap-2 order-3 md:order-none'>
+      {techStack.map((tech) => <Pill text={tech} />)}
+    </div>
+
+    <!-- Links -->
+    <div class='flex gap-4 items-center order-2 md:order-none'>
+      {
+        repoUrl && (
+          <a
+            href={repoUrl}
+            target='_blank'
+            rel='noopener noreferrer'
+            aria-label='View GitHub Repository'
+            class='text-slate-400 hover:text-teal-300 transition-colors duration-300 hover:scale-110 transform'
+          >
+            <Github size={20} />
+          </a>
+        )
+      }
+      {
+        projectUrl && (
+          <a
+            href={projectUrl}
+            target='_blank'
+            rel='noopener noreferrer'
+            aria-label='View Live Project'
+            class='text-slate-400 hover:text-teal-300 transition-colors duration-300 hover:scale-110 transform'
+          >
+            <ExternalLink size={20} />
+          </a>
+        )
+      }
+    </div>
+  </div>
+</div>
