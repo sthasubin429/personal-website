@@ -46,5 +46,30 @@ const { title = 'Subin Shrestha', description = 'Software Engineer | Data Analys
     style='background: linear-gradient(rgba(29, 78, 216, 0.15), rgba(29, 78, 216, 0.15)), oklch(20.8% 0.042 265.755);'
   >
     <slot />
+    <script is:inline>
+      // Intersection Observer for scroll-triggered animations
+      document.addEventListener('DOMContentLoaded', () => {
+        const animateOnScrollElements = document.querySelectorAll(
+          '.scroll-float-up, .scroll-float-up-delay-1, .scroll-float-up-delay-2, .scroll-float-up-delay-3'
+        );
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                observer.unobserve(entry.target); // Only animate once
+              }
+            });
+          },
+          {
+            threshold: 0.2, // Trigger when 20% of element is visible
+            rootMargin: '0px 0px -100px 0px', // Trigger slightly before element reaches viewport
+          }
+        );
+
+        animateOnScrollElements.forEach((el) => observer.observe(el));
+      });
+    </script>
   </body>
 </html>
