@@ -59,7 +59,7 @@ export const archiveProjects: ArchiveProjectType[] = [
     year: 2025,
     title: 'macOS Dotfiles',
     techStack: ['Shell', 'Bash', 'Configuration'],
-    repoUrl: 'https://github.com/sthasubin429/dotfiles-macos',
+    repoUrl: 'https://github.com/sthasubin429/.dotfiles-macos',
     category: 'Other',
   },
 
