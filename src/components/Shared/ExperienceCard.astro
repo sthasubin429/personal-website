@@ -34,7 +34,7 @@ const { years, role, company, link, description, keywords } = Astro.props;
     <ul class='list-disc list-outside text-slate-400 my-2 ml-5'>
       {
         description.map((item: string) => (
-          <li class='mb-1 [&>span]:text-slate-200 [&>span]:font-medium' set:html={item} />
+          <li class='mb-1 [&>span]:text-teal-300 [&>span]:font-medium' set:html={item} />
         ))
       }
     </ul>
