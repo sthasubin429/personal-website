@@ -1,9 +1,17 @@
 import customerChurn from '../assets/customerChurn.jpg';
 import musicPlayer from '../assets/musicPlayer.jpg';
 import streetFighter from '../assets/streetFighter.jpg';
+import yelp from '../assets/yelp.jpg';
 import type { ArchiveProjectType, ProjectType } from './types';
 
 export const featuredProjects: ProjectType[] = [
+  {
+    title: 'Yelp RAG System',
+    imageUrl: yelp.src,
+    repoUrl: 'https://github.com/sthasubin429/yelp-rag',
+    description: `Retrieval-Augmented Generation system built on Yelp restaurant review data featuring a comprehensive <span>NLP</span> pipeline with sentiment classification, <span>BERTopic</span> clustering, and <span>FAISS</span> vector search. Includes an interactive chat interface powered by locally-run <span>Ollama</span> models for privacy-focused, cost-efficient querying.`,
+    techStack: ['Python', 'FAISS', 'BERTopic', 'Ollama', 'spaCy'],
+  },
   {
     title: 'Groovy',
     imageUrl: musicPlayer.src,
@@ -33,6 +41,13 @@ export const featuredProjects: ProjectType[] = [
 
 export const archiveProjects: ArchiveProjectType[] = [
   // 2025 Projects
+  {
+    year: 2025,
+    title: 'Yelp RAG System',
+    techStack: ['Python', 'FAISS', 'BERTopic', 'Ollama', 'spaCy'],
+    repoUrl: 'https://github.com/sthasubin429/yelp-rag',
+    category: 'Data Analytics',
+  },
   {
     year: 2025,
     title: 'Telecom Customer Churn Analysis',
