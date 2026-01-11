@@ -1,18 +1,28 @@
-<footer class='w-full flex flex-col justify-center items-center gap-1 *:text-xxs p-6 pb-20 sm:pb-6'>
-  <a
-    href='https://github.com/sthasubin429/personal-website'
-    target='_blank'
-    rel='noopener noreferrer'
-    class='hover:text-teal-300 font-mono'
-  >
-    Build with Astro & TailwindCSS</a
-  >
-  <a
-    href='https://brittanychiang.com/'
-    target='_blank'
-    rel='noopener noreferrer'
-    class='hover:text-teal-300 font-mono'
-  >
-    Original Designs by Brittany Chiang
-  </a>
+<footer class='w-full flex flex-col justify-center items-center p-8 pb-24 sm:pb-8'>
+  <!-- Decorative divider -->
+  <div class='flex items-center justify-center gap-6 mb-6'>
+    <div class='h-px w-16 bg-gradient-to-r from-transparent to-teal-500/20'></div>
+    <div class='w-1.5 h-1.5 bg-teal-400/40 rounded-full'></div>
+    <div class='h-px w-16 bg-gradient-to-l from-transparent to-teal-500/20'></div>
+  </div>
+
+  <!-- Credits -->
+  <div class='flex flex-col items-center gap-2 text-xs text-slate-500 font-mono'>
+    <a
+      href='https://github.com/sthasubin429/personal-website'
+      target='_blank'
+      rel='noopener noreferrer'
+      class='hover:text-teal-300 transition-colors duration-500'
+    >
+      Built with Astro & Tailwind
+    </a>
+    <a
+      href='https://brittanychiang.com/'
+      target='_blank'
+      rel='noopener noreferrer'
+      class='hover:text-teal-300 transition-colors duration-500 text-slate-600'
+    >
+      Design inspired by Brittany Chiang
+    </a>
+  </div>
 </footer>

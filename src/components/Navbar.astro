@@ -10,29 +10,29 @@ const linkPrefix = isSubpage ? '/' : '';
 
 <nav
   id='navbar'
-  class='fixed bottom-0 left-0 w-full h-16 z-[999] sm:top-0 sm:left-0 px-4 backdrop-blur-xs transition-transform duration-300 ease-in-out sm:translate-y-0'
+  class='fixed bottom-0 left-0 w-full h-16 z-[999] sm:top-0 sm:left-0 px-4 backdrop-blur-sm transition-all duration-400 ease-out sm:translate-y-0'
 >
   <div class='container mx-auto h-16 flex flex-nowrap items-center justify-between'>
     <div class='flex items-center'>
-      <a href='/' class='font-medium'>
-        <h4 class='text-xl font-semibold float-down'>
-          Subin<span class='text-teal-300'>Shrestha</span>
+      <a href='/' class='font-medium group'>
+        <h4 class='text-xl font-semibold float-down transition-colors duration-300'>
+          Subin<span class='text-teal-300 group-hover:text-teal-200 transition-colors duration-300'>Shrestha</span>
         </h4>
       </a>
     </div>
     <div class='flex justify-evenly items-center font-mono'>
       <div class='hidden sm:block'>
-        <ul class='flex flex-row items-center justify-end ml-2'>
-          <li class='mx-4 float-down'>
+        <ul class='flex flex-row items-center justify-end ml-2 gap-1'>
+          <li class='float-down'>
             <MainLink href={`${linkPrefix}#about`}> About </MainLink>
           </li>
-          <li class='mx-4 float-down-delay-1'>
+          <li class='float-down-delay-1'>
             <MainLink href={`${linkPrefix}#projects`}> Projects </MainLink>
           </li>
-          <li class='mx-4 float-down-delay-2'>
+          <li class='float-down-delay-2'>
             <MainLink href={`${linkPrefix}#experience`}> Experience </MainLink>
           </li>
-          <li class='mx-4 float-down-delay-3'>
+          <li class='float-down-delay-3'>
             <MainLink href={`${linkPrefix}#contact`}> Contact </MainLink>
           </li>
         </ul>
@@ -40,7 +40,7 @@ const linkPrefix = isSubpage ? '/' : '';
       <!-- Mobile menu toggle button -->
       <button
         id='mobile-menu-toggle'
-        class='block sm:hidden p-2 relative'
+        class='block sm:hidden p-2 relative text-slate-400 hover:text-teal-300 transition-colors duration-300'
         aria-label='Toggle mobile menu'
       >
         <LayoutGrid />

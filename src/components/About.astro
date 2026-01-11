@@ -24,67 +24,63 @@ const tools = [
 ];
 ---
 
-<div class='p-4 md:p-10 lg:p-40' id='about' aria-labelledby='about-heading'>
-  <h2 class='text-2xl font-bold text-slate-200 mb-6 scroll-float-up'>About Me</h2>
-  <div class='flex flex-col md:flex-row justify-start items-centeritems-start gap-6'>
-    <div class='space-y-4'>
-      <p class='scroll-float-up-delay-1'>
-        Hello! My name is Subin and I enjoy creating things that solve real-world problems with
-        data. My interest in programming started during my Computer Science degree when I discovered
-        how code could bring ideas to life, turns out building my first web application taught me a
-        lot about the power of technology to connect people!
-      </p>
-      <p class='scroll-float-up-delay-2'>
-        Fast forward to today, I've had the privilege of working at a
-        <Link href='https://www.outcodesoftware.com/'>fast-paced startup</Link>,
-        <Link href='https://bajratechnologies.com/'>established tech companies</Link>, and now in
-        academic research. My main focus these days is building data-driven solutions and machine
-        learning models at Langara College's
-        <Link href='https://students.langara.ca/about-langara/applied-research/index.html'
-          >Applied Research Center</Link
-        >, where I analyze complex datasets and create insights that support important research
-        initiatives.
-      </p>
-      <p class='scroll-float-up-delay-3'>
-        When I'm not analyzing datasets, I enjoy working on personal projects like building
-        AI-powered applications and exploring new machine learning techniques that push the
-        boundaries of what's possible with data.
-      </p>
-      <div class='scroll-float-up-delay-3'>
-        <p>Few technologies I have been working with recently:</p>
+<div class='p-4 md:p-10 lg:p-40 relative' id='about' aria-labelledby='about-heading'>
+  <div class='flex items-center gap-3 mb-6 scroll-float-up'>
+    <h2 class='text-2xl font-bold text-slate-200 art-line'>About</h2>
+  </div>
 
-        <div class='flex flex-wrap justify-start items-center gap-2 mt-2'>
-          {tools.map(tool => <Pill key={tool} text={tool} />)}
+  <div class='flex flex-col md:flex-row justify-start items-start gap-10 lg:gap-16'>
+    <div class='space-y-5 md:w-3/5'>
+      <p class='scroll-float-up-delay-1 leading-relaxed'>
+        I'm drawn to the intersection of <span class='text-slate-300'>data</span> and <span class='text-slate-300'>design</span> —
+        finding patterns in chaos and crafting solutions that feel intuitive.
+        My journey began with a Computer Science degree, where building my first (admittedly rough) web app sparked something.
+      </p>
+      <p class='scroll-float-up-delay-2 leading-relaxed'>
+        I've worked across the spectrum: from a
+        <Link href='https://www.outcodesoftware.com/'>fast-moving startup</Link> where I learned to ship,
+        to <Link href='https://bajratechnologies.com/'>established tech companies</Link> where I learned scale.
+        Now I'm at <Link href='https://students.langara.ca/about-langara/applied-research/index.html'>Langara's Applied Research Center</Link>,
+        building ML models and uncovering insights from complex datasets.
+      </p>
+      <p class='scroll-float-up-delay-3 leading-relaxed'>
+        When not analyzing data, I'm experimenting with AI projects or exploring new ways to visualize information.
+      </p>
+      <div class='scroll-float-up-delay-3 pt-2'>
+        <p class='text-sm text-slate-500 uppercase tracking-wider mb-3'>Tools & Technologies</p>
+        <div class='flex flex-wrap justify-start items-center gap-2'>
+          {tools.map((tool, index) => (
+            <Pill
+              key={tool}
+              text={tool}
+              rotateClass={index % 3 === 0 ? 'pill-rotate-1' : index % 3 === 1 ? 'pill-rotate-2' : ''}
+            />
+          ))}
         </div>
       </div>
     </div>
 
+    <!-- Artistic image container -->
     <div
-      class='flex-shrink-0 w-[300px] h-[300px] relative group cursor-pointer scroll-float-up-delay-2'
+      class='flex-shrink-0 w-[260px] h-[260px] md:w-[280px] md:h-[280px] relative group scroll-float-up-delay-2'
     >
-      <!-- Border effect with initial offset -->
+      <!-- Background accent -->
       <div
-        class='absolute top-3 left-3 w-full h-full border-2 border-teal-300 rounded-lg transform transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:translate-y-1 scroll-float-up-delay-2'
-      >
-      </div>
+        class='absolute inset-0 border-2 border-teal-400/20 rounded-2xl transform translate-x-4 translate-y-4 transition-transform duration-700 ease-out group-hover:translate-x-5 group-hover:translate-y-5'
+      ></div>
       <!-- Image container -->
       <div
-        class='relative
-        z-10
-        w-full
-        h-full
-        transform
-        transition-all
-        duration-300
-        ease-out group-hover:-translate-x-1 group-hover:-translate-y-1 scroll-float-up-delay-1'
+        class='relative z-10 w-full h-full rounded-2xl overflow-hidden transition-transform duration-700 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1'
       >
         <img
           src={gibliJpg.src}
-          alt='Description of image'
+          alt='Subin Shrestha'
           width='500'
           height='500'
-          class='w-full h-full object-cover rounded-lg shadow-md'
+          class='w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105'
         />
+        <!-- Subtle overlay on hover -->
+        <div class='absolute inset-0 bg-gradient-to-t from-teal-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>
       </div>
     </div>
   </div>

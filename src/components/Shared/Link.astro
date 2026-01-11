@@ -10,7 +10,7 @@ const { href = '#', class: customClass = '', label = 'Link' } = Astro.props;
   target="_blank"
 >
   <span
-    class="inline-block relative text-inherit before:content-[''] before:absolute before:left-0 before:bottom-[4px] before:w-full before:h-[0.1px] before:bg-teal-500 before:scale-x-0 before:transition-transform before:duration-300 before:origin-left group-hover:text-teal-500 group-focus:text-teal-500 group-hover:before:scale-x-100 group-focus:before:scale-x-100"
+    class="inline-block relative text-inherit before:content-[''] before:absolute before:left-0 before:-bottom-[2px] before:w-full before:h-[2px] before:bg-teal-400 before:scale-x-0 before:origin-right before:transition-transform before:duration-300 group-hover:text-teal-300 group-focus:text-teal-300 group-hover:before:scale-x-100 group-hover:before:origin-left group-focus:before:scale-x-100"
   >
     <slot />
   </span>

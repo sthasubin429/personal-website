@@ -5,9 +5,11 @@ import type { ProjectType } from '../utils/types';
 import LinkButton from './Shared/LinkButton.astro';
 ---
 
-<div class="p-4 md:p-10 lg:p-16" id="projects" aria-labelledby="projects-heading">
-  <h2 class="text-2xl font-bold text-slate-200 mb-6 scroll-float-up">Some things I've Built</h2>
-  <div class="w-full flex flex-col space-y-4">
+<div class="p-4 md:p-10 lg:p-16 relative" id="projects" aria-labelledby="projects-heading">
+  <div class='flex items-center gap-3 mb-8 scroll-float-up'>
+    <h2 class="text-2xl font-bold text-slate-200 art-line">Selected Work</h2>
+  </div>
+  <div class="w-full flex flex-col space-y-6">
     {
       featuredProjects.map((project: ProjectType, index: number) => (
         <div class={`w-full flex scroll-float-up ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
@@ -23,10 +25,10 @@ import LinkButton from './Shared/LinkButton.astro';
       ))
     }
   </div>
-  <div class="w-full grid place-items-center my-8 scroll-float-up">
+  <div class="w-full grid place-items-center my-10 scroll-float-up">
     <LinkButton
       href="/archive"
-      text="Show More"
+      text="See more projects"
       label="View All Projects"
       external={false}
     />

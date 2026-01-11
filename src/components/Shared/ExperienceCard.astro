@@ -1,48 +1,56 @@
 ---
 import { ArrowUpRight } from '@lucide/astro';
 import Pill from './Pill.astro';
-const { years, role, company, link, description, keywords } = Astro.props;
+const { years, role, company, link, description, keywords, showNode = false } = Astro.props;
 ---
 
 <a
-  class='w-full flex flex-col sm:flex-row justify-start items-start gap-2 sm:gap-8 relative group cursor-pointer p-4 lg:p-8 rounded-md transition-all duration-300 hover:scale-[1.01]'
+  class='w-full flex flex-col sm:flex-row justify-start items-start gap-2 sm:gap-8 relative group cursor-pointer p-4 lg:p-8 rounded-lg gradient-border transition-all duration-300 hover:scale-[1.005]'
   href={link}
   target='_blank'
   rel='noopener noreferrer'
   aria-label={`View details about ${role} at ${company}`}
 >
   <div
-    class='absolute inset-y-0 inset-x-0 z-0 hidden rounded-md transition duration-300 group-hover:block group-hover:bg-white/5 pointer-events-none'
+    class='absolute inset-y-0 inset-x-0 z-0 hidden rounded-lg transition duration-300 group-hover:block group-hover:bg-white/5 pointer-events-none'
     aria-hidden='true'
   >
   </div>
 
+  <!-- Timeline node (desktop only) -->
+  {showNode && (
+    <div class='hidden lg:block absolute left-[166px] top-6 timeline-node' aria-hidden='true'></div>
+  )}
+
   <div class='flex-shrink-0 pt-2 w-full sm:w-[132px]'>
-    <p class='text-xs uppercase font-medium'>
+    <p class='text-xs uppercase font-medium text-slate-500 group-hover:text-slate-400 transition-colors'>
       {years}
     </p>
   </div>
   <div class='flex-1 min-w-0'>
-    <h1 class='text-slate-200 font-medium text-lg group-hover:text-teal-400 transition-colors'>
-      {role} &#183; {company}
+    <h1 class='text-slate-200 font-medium text-lg group-hover:text-teal-300 transition-colors duration-300'>
+      {role} <span class='text-slate-400'>@</span> {company}
       <ArrowUpRight
-        class='inline w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-teal-400'
+        class='inline w-4 h-4 ml-1 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-teal-300'
         aria-hidden='true'
         focusable='false'
       />
     </h1>
-    <ul class='list-disc list-outside text-slate-400 my-2 ml-5'>
+    <ul class='list-disc list-outside text-slate-400 my-3 ml-5 space-y-1'>
       {
         description.map((item: string) => (
-          <li class='mb-1 [&>span]:text-teal-300 [&>span]:font-medium' set:html={item} />
+          <li class='[&>span]:text-teal-300 [&>span]:font-medium leading-relaxed' set:html={item} />
         ))
       }
     </ul>
-    <ul class='flex flex-wrap gap-2 mt-2'>
+    <ul class='flex flex-wrap gap-2 mt-3'>
       {
-        keywords.map((keyword: string) => (
+        keywords.map((keyword: string, index: number) => (
           <li>
-            <Pill text={keyword} />
+            <Pill
+              text={keyword}
+              rotateClass={index % 3 === 0 ? 'pill-rotate-1' : index % 3 === 1 ? 'pill-rotate-2' : ''}
+            />
           </li>
         ))
       }

@@ -81,11 +81,13 @@ const experiences = [
 ];
 ---
 
-<section class='w-full p-4 md:p-10 lg:p-16' aria-labelledby='experience-heading' id='experience'>
-  <h2 class='text-2xl font-bold text-slate-200 mb-6 scroll-float-up'>Experience</h2>
-  <div class='flex flex-col space-y-2 lg:space-y-4 relative' role='list'>
-    <!-- Timeline line (desktop only) -->
-    <div class='hidden lg:block absolute left-[166px] top-4 bottom-4 w-px bg-slate-700/50'></div>
+<section class='w-full p-4 md:p-10 lg:p-16 relative' aria-labelledby='experience-heading' id='experience'>
+  <div class='flex items-center gap-3 mb-8 scroll-float-up'>
+    <h2 class='text-2xl font-bold text-slate-200 art-line'>Experience</h2>
+  </div>
+  <div class='flex flex-col space-y-3 lg:space-y-5 relative' role='list'>
+    <!-- Dotted timeline line (desktop only) -->
+    <div class='hidden lg:block absolute left-[165px] top-6 bottom-6 timeline-dotted'></div>
 
     {
       experiences.map((exp, index) => (
@@ -98,6 +100,7 @@ const experiences = [
             link={exp.link}
             keywords={exp.keywords}
             aria-label={`${exp.role} at ${exp.company}, ${exp.duration}`}
+            showNode={true}
           />
         </div>
       ))
