@@ -3,9 +3,31 @@ import ExperienceCard from './Shared/ExperienceCard.astro';
 
 const experiences = [
   {
+    role: 'Full Stack Developer',
+    company: 'yPilot',
+    duration: 'Nov 2025 – Present',
+    description: [
+      'Build and ship across the full stack (<span>Python FastAPI</span> services, <span>React 19 + TypeScript</span> frontend, <span>AWS infrastructure-as-code</span>) for a <span>multi-tenant SaaS</span> platform serving regulated-industry customers, owning features end-to-end from data model through UI.',
+      'Designed end-to-end <span>document-processing pipelines</span> combining <span>OCR</span>, <span>PII redaction</span>, and <span>Claude on AWS Bedrock</span> for structured data extraction, then cut per-document inference cost by <span>over 10x</span> by benchmarking open-source models on hundreds of real documents and migrating production to <span>vLLM-hosted GPUs on scale-to-zero EC2</span>.',
+      'Built <span>agentic LLM features</span> on <span>LangGraph</span> with <span>PostgreSQL-backed checkpointing</span> and Bedrock-hosted Claude, shipping a retrieval-grounded compliance assistant, a structured-search agent with <span>TypeScript SDK code mode</span>, and a regulatory gap-analysis agent backed by <span>tool use</span>, <span>prompt caching</span>, and <span>Pydantic-validated structured outputs</span>.',
+    ],
+    link: 'https://www.ypilot.ai/',
+    keywords: [
+      'Python',
+      'FastAPI',
+      'React',
+      'TypeScript',
+      'AWS Bedrock',
+      'Claude',
+      'LangGraph',
+      'OCR',
+      'vLLM',
+    ],
+  },
+  {
     role: 'Student Aide',
     company: 'Applied Research Center, Langara College',
-    duration: 'Mar 2025 – Present',
+    duration: 'Mar 2025 – Aug 2025',
     description: [
       'Cleaned and analyzed complex datasets using <span>Python</span>, processing <span>50,000+ data points</span> to support academic research initiatives.',
       'Executed statistical tests including <span>regression analysis</span> and <span>hypothesis testing</span>, identifying meaningful patterns that enhanced research conclusions.',
@@ -24,7 +46,7 @@ const experiences = [
   {
     role: 'Peer Tutor',
     company: 'Langara College',
-    duration: 'May 2025 – Present',
+    duration: 'May 2025 – Apr 2026',
     description: [
       'Tutored <span>25+ students</span> in <span>Data Analytics</span> and <span>Computer Science</span> courses, achieving <span>100% student pass rate</span>.',
       'Guided students through complex predictive analytics concepts including <span>regression analysis</span>, <span>ANOVA</span>, and <span>generalized linear models</span>.',
@@ -48,7 +70,7 @@ const experiences = [
   {
     role: 'Associate Software Engineer',
     company: 'Bajra Technologies',
-    duration: 'Aug 2021 – Feb 2023',
+    duration: 'Dec 2021 – Feb 2023',
     description: [
       'Collaborated in a cross-functional team to design and develop a large-scale web application using <span>Angular</span> and <span>Ruby on Rails</span>.',
       'Applied <span>responsive design</span> principles and <span>UI/UX</span> fundamentals, creating mobile-first applications with <span>100% cross-browser compatibility</span>.',
